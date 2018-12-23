@@ -1,0 +1,7 @@
+FROM ubuntu:18.04
+MAINTAINER M.A. Nilforooshan "mohammad.nilforooshan@lic.co.nz"
+ENV VERSION 201901.1
+WORKDIR /home/
+VOLUME /mnt/data/
+COPY test /home/
+ENTRYPOINT ["scripts/script.sh"]
