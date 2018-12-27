@@ -6,3 +6,5 @@ VOLUME /mnt/data/
 COPY test /home/
 RUN apt-get update && apt-get install -y --no-install-recommends r-base
 RUN Rscript -e "install.packages('stargazer', dependencies=TRUE)"
+CMD Rscript scripts/rscript.R
+
