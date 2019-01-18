@@ -11,7 +11,7 @@ Test the local image.
 mkdir -p /home/$(whoami)/Downloads/
 mkdir -p /home/$(whoami)/Downloads/data/
 echo "This is the data" > /home/$(whoami)/Downloads/data/datfile
-docker run --rm -v /home/mnil/Downloads/data:/mnt/data -it docker_test:latest
+docker run --rm -v /home/$(whoami)/Downloads/data:/mnt/data -it docker_test:latest
 ```
 
 Push it to DockerHub.
@@ -37,7 +37,7 @@ Test the local image.
 mkdir -p /home/$(whoami)/Downloads/
 mkdir -p /home/$(whoami)/Downloads/data/
 echo "This is the data" > /home/$(whoami)/Downloads/data/datfile
-docker run --rm -v /home/mnil/Downloads/data:/mnt/data -it docker_test_r:latest
+docker run --rm -v /home/$(whoami)/Downloads/data:/mnt/data -it docker_test_r:latest
 ```
 
 Push it to DockerHub.
