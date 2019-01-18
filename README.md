@@ -8,6 +8,9 @@ docker build -t docker_test:latest -f test/Dockerfiles/Dockerfile1 .
 Test the local image.
 
 ```sh
+mkdir -p /home/$(whoami)/Downloads/
+mkdir -p /home/$(whoami)/Downloads/data/
+echo "This is the data" > /home/$(whoami)/Downloads/data/datfile
 docker run --rm -v /home/mnil/Downloads/data:/mnt/data -it docker_test:latest
 ```
 
@@ -31,6 +34,9 @@ docker build -t docker_test_r:latest -f test/Dockerfiles/Dockerfile2 .
 Test the local image.
 
 ```sh
+mkdir -p /home/$(whoami)/Downloads/
+mkdir -p /home/$(whoami)/Downloads/data/
+echo "This is the data" > /home/$(whoami)/Downloads/data/datfile
 docker run --rm -v /home/mnil/Downloads/data:/mnt/data -it docker_test_r:latest
 ```
 
